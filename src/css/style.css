@@ -1412,6 +1412,9 @@ ol {
 }
 /* Large Mobile :480px. */
 @media only screen and (max-width: 767px) {
+  .hero-subscribe {
+    margin-top: 50px;
+  }
   .header-section {
     padding: 30px 0;
     background: #fff;
@@ -1769,8 +1772,7 @@ p.focus_yr::after {
 .vertical-row {
   float: left;
   height: 230px;
-  width: 1px;
-  /* edit this if you want */
+  width: 1px; /* edit this if you want */
   background-color: white;
 }
 .home_p,
