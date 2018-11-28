@@ -470,21 +470,18 @@ ol {
   background: #eaeaea;
   overflow: hidden;
 }
-.team-members {
-  margin: 0 -10px;
-}
 .member {
   background: #fff;
   width: calc(20% - 25px);
   display: inline-block;
-  margin: 0 10px;
+  margin: 10px;
   text-align: center;
   padding: 50px 10px;
   -webkit-box-shadow: 1px 1px 1px rgba(33, 54, 61, 0.15);
   box-shadow: 1px 1px 1px rgba(33, 54, 61, 0.15);
   border-radius: 10px;
-  position: relative;
 }
+
 .member h2 {
   font-size: 22px;
   margin-bottom: 5px;
@@ -1625,7 +1622,7 @@ a {
   margin-top: 320px;
   width: 200%;
   height: 0px;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(255, 255, 255, 0);
   border-top: 0px solid #fff;
   padding-left: 0%;
 }
@@ -1640,25 +1637,25 @@ a {
   position: absolute;
   height: 40vh;
   width: 1px;
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0);
   background: -webkit-linear-gradient(
     top,
-    rgba(0, 0, 0, 0.5),
+    rgba(255, 255, 255, 0),
     rgba(0, 0, 0, 1)
   ); /* Safari 5.1-6 */
   background: -o-linear-gradient(
     bottom,
-    rgba(0, 0, 0, 0.5),
+    rgba(255, 255, 255, 0),
     rgba(0, 0, 0, 1)
   ); /* Opera 11.1-12 */
   background: -moz-linear-gradient(
     bottom,
-    rgba(0, 0, 0, 0.5),
+    rgba(255, 255, 255, 0),
     rgba(0, 0, 0, 1)
   ); /* Fx 3.6-15 */
   background: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0.5),
+    rgba(255, 255, 255, 0),
     rgba(255, 255, 255, 1)
   ); /* Standard */
   margin-top: -40vh;
@@ -1765,7 +1762,8 @@ p.focus_yr::after {
 .vertical-row {
   float: left;
   height: 230px;
-  width: 1px; /* edit this if you want */
+  width: 1px;
+  /* edit this if you want */
   background-color: white;
 }
 .home_p,
@@ -1776,4 +1774,9 @@ p.focus_yr::after {
 .nav-item a {
   font-family: 'Skolar Regular', Skolar, 'Liberation Sans', 'Nimbus Sans L',
     'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+.carousel {
+  background: #eee;
+}
+.carousel-cell {
 }

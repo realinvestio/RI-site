@@ -132,10 +132,11 @@ $(window).on('load', function() {
     });
   });
 
-  $('.team-members').slick({
-    dots: true,
-    infinite: true,
-    slidesToShow: 3,
-    slidesToScroll: 3
+  $('.team-members').flickity({
+    // options
+    cellAlign: 'center',
+    contain: true,
+    initialIndex: 0,
+    wrapAround: true
   });
 })(jQuery);
