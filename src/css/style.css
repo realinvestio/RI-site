@@ -17,7 +17,6 @@
 html,
 body {
   height: 100%;
-  font-family: 'Lato', sans-serif;
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
 }
@@ -30,8 +29,9 @@ h5,
 h6 {
   color: #173b43;
   margin: 0;
-  font-weight: 500;
-  font-family: 'Futura', sans-serif;
+  font-family: myriad-pro, sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }
 
 h1 {
@@ -62,6 +62,11 @@ p {
   font-size: 15.7px;
   color: #75849a;
   line-height: 1.6;
+  font-family: skolar-latin, serif;
+
+  font-weight: 400;
+
+  font-style: normal;
 }
 
 img {
@@ -191,7 +196,6 @@ ol {
 
 .gradient-bg,
 .site-btn.sb-gradients,
-.member-social a:hover,
 .single-blog-page .social-share a:hover,
 .comment .comment-content .c-btn:hover,
 .comment-form label {
@@ -378,7 +382,7 @@ ol {
 }
 .hero-text h2 {
   color: #fdfdfd;
-  font-size: 70px;
+  font-size: 60px;
   margin-bottom: 35px;
 }
 .hero-text h2 span {
@@ -481,7 +485,6 @@ ol {
   box-shadow: 1px 1px 1px rgba(33, 54, 61, 0.15);
   border-radius: 10px;
 }
-
 .member h2 {
   font-size: 22px;
   margin-bottom: 5px;
@@ -526,9 +529,13 @@ ol {
   display: inline-block;
   border-radius: 50%;
   background: #cbd3df;
-  color: #fff;
+  color: rgb(141, 131, 131);
   padding-top: 13px;
   margin: 0 8px;
+}
+.member-social a:hover {
+  background: #173b43;
+  color: #fff;
 }
 .member-meta {
   padding-left: 85px;
