@@ -366,7 +366,7 @@ ol {
   top: 0px;
   left: 0px;
   min-width: 100%;
-  min-height: 100%;
+  min-height: 104%;
   width: auto;
   height: auto;
   overflow: hidden;
@@ -415,6 +415,9 @@ ol {
   color: #fff;
   opacity: 1;
   /* Firefox */
+}
+#mc-form input[type='submit'] {
+  cursor: pointer;
 }
 /* ---------------------
   About Section
@@ -704,7 +707,11 @@ ol {
   Blog Section
 ----------------------- */
 .blog-section {
-  background: #f3f7f9;
+  background: #eaeaea;
+}
+.blog-section h2,
+.blog-section p {
+  color: #173b43;
 }
 .blog-thumb {
   margin-bottom: 0;
@@ -1772,7 +1779,8 @@ p.focus_yr::after {
 .vertical-row {
   float: left;
   height: 230px;
-  width: 1px; /* edit this if you want */
+  width: 1px;
+  /* edit this if you want */
   background-color: white;
 }
 .home_p,
@@ -1787,5 +1795,35 @@ p.focus_yr::after {
 .carousel {
   background: #eee;
 }
-.carousel-cell {
+/* ************
+  partners-section
+************ */
+.partners-section .partner {
+  margin-bottom: 20px;
+}
+.partners-section .flex-grid img {
+  width: 100%;
+}
+.flex-grid {
+  display: flex;
+}
+.flex-grid .col {
+  flex: 1;
+}
+.flex-grid-thirds {
+  display: flex;
+  justify-content: space-between;
+}
+.flex-grid-thirds .col {
+  width: 32%;
+}
+@media (max-width: 400px) {
+  .flex-grid,
+  .flex-grid-thirds {
+    display: block;
+  }
+  .flex-grid-thirds .col {
+    width: 100%;
+    margin: 0 0 10px 0;
+  }
 }

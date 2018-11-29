@@ -1,16 +1,13 @@
 'use strict';
 
-$(window).on('load', function() {
-  /*------------------
-		Preloder
-	--------------------*/
-  $('.loader').fadeOut();
-  $('#preloder')
-    .delay(400)
-    .fadeOut('slow');
-});
-
 (function($) {
+  var cfg = {
+    scrollDuration: 800 // smoothscroll duration
+  };
+  clSmoothScroll();
+  $('a').click(function(e) {
+    e.preventDefault();
+  });
   /*------------------
 		hero
 	--------------------*/
@@ -65,7 +62,8 @@ $(window).on('load', function() {
     center: true,
     margin: 20,
     autoplay: true,
-    mouseDrag: false
+    mouseDrag: false,
+    autoplayHoverPause: true
   });
 
   review_text.owlCarousel({
@@ -77,6 +75,7 @@ $(window).on('load', function() {
     autoplay: true,
     navText: ['<i class="ti-angle-left"><i>', '<i class="ti-angle-right"><i>'],
     animateOut: 'fadeOutDown',
+    autoplayHoverPause: true,
     animateIn: 'fadeInDown'
   });
 
@@ -139,4 +138,214 @@ $(window).on('load', function() {
     initialIndex: 0,
     wrapAround: true
   });
+
+  // Subscription form submit
+
+  $('#mc-form').validate({
+    /* submit via ajax */
+    submitHandler(form) {
+      // var sLoader = $('.submit-loader');
+      var data = $('#mc-form')
+        .serializeArray()
+        .reduce(function(obj, item) {
+          if (item.name != 'submit') {
+            obj[item.name] = item.value;
+          }
+          return obj;
+        }, {});
+      var nm = data.fname.split(' ');
+      var fname = nm[0];
+      var lname = '';
+      if (nm.length > 1) {
+        var l = nm.length;
+        for (var i = 1; i < l; i++) {
+          if (nm[i] == '') {
+            continue;
+          }
+          lname += ' ' + nm[i].trim();
+        }
+      }
+      // Submit form
+      $.ajax({
+        url: '/sub/new/add/',
+        type: 'POST',
+        data: {
+          subscriber_fname: fname,
+          subscriber_lname: lname,
+          email: data.email
+        },
+        beforeSend(xhr, settings) {
+          if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+            xhr.setRequestHeader('X-CSRFToken', data.csrfmiddlewaretoken);
+          }
+        },
+        success(req) {
+          // Client side response
+          // console.log(req);
+          $('#mc-form_server_err').fadeIn(800);
+          if (req.response == 'Success') {
+            $('#mc-form_server_err').css('color', 'white');
+            $('#mc-form_server_err').text(
+              'Thanks for subscribing. We will contact you shortly!'
+            );
+            $('#mc-form_server_err')
+              .delay(5000)
+              .fadeOut(1000);
+            return true;
+          }
+          if (req.response == 'Error') {
+            $('#mc-form_server_err').css('color', 'red');
+            if (typeof req.reason.email[0]) {
+              $('#mc-form_server_err').text(req.reason.email[0]);
+            } else {
+              $('#mc-form_server_err').text('Something went wrong!');
+            }
+            $('#mc-form_server_err')
+              .delay(5000)
+              .fadeOut(1000);
+            return false;
+          }
+        },
+        error(XMLHttpRequest, textStatus, errorThrown) {
+          if (XMLHttpRequest.status == 0) {
+            console.log('Network Error.');
+          } else if (XMLHttpRequest.status == 404) {
+            console.log('Requested URL not found.');
+          } else if (XMLHttpRequest.status == 500) {
+            console.log('Internel Server Error.');
+          } else {
+            alert('Unknown Error : ' + XMLHttpRequest.responseText);
+          }
+          $('#mc-form_server_err').fadeIn(800);
+          $('#mc-form_server_err').css('color', 'white');
+          $('#mc-form_server_err').text(
+            'Some serious server error happened! Please try after sometime'
+          );
+          $('#mc-form_server_err')
+            .delay(5000)
+            .fadeOut(1000);
+        }
+      });
+    }
+  });
+
+  $('#mc-form_footer').validate({
+    /* submit via ajax */
+    submitHandler(form) {
+      // var sLoader = $('.submit-loader');
+      var data = $('#mc-form_footer')
+        .serializeArray()
+        .reduce(function(obj, item) {
+          if (item.name != 'submit') {
+            obj[item.name] = item.value;
+          }
+          return obj;
+        }, {});
+      var nm = data.fname.split(' ');
+      var fname = nm[0];
+      var lname = '';
+      if (nm.length > 1) {
+        var l = nm.length;
+        for (var i = 1; i < l; i++) {
+          if (nm[i] == '') {
+            continue;
+          }
+          lname += ' ' + nm[i].trim();
+        }
+      }
+      // Submit form
+      $.ajax({
+        url: '/sub/new/add/',
+        type: 'POST',
+        data: {
+          subscriber_fname: fname,
+          subscriber_lname: lname,
+          email: data.email
+        },
+        beforeSend(xhr, settings) {
+          if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+            xhr.setRequestHeader('X-CSRFToken', data.csrfmiddlewaretoken);
+          }
+        },
+        success(req) {
+          // Client side response
+          // console.log(req);
+          $('#mc-form_footer_server_err').fadeIn(800);
+          if (req.response == 'Success') {
+            $('#mc-form_footer_server_err').css('color', '#1f3b42');
+            $('#mc-form_footer_server_err').text(
+              'Thanks for subscribing. We will contact you shortly!'
+            );
+            $('#mc-form_footer_server_err')
+              .delay(5000)
+              .fadeOut(1000);
+            return true;
+          }
+          if (req.response == 'Error') {
+            $('#mc-form_footer_server_err').css('color', 'red');
+            if (typeof req.reason.email[0]) {
+              $('#mc-form_footer_server_err').text(req.reason.email[0]);
+            } else {
+              $('#mc-form_footer_server_err').text('Something went wrong!');
+            }
+            $('#mc-form_footer_server_err')
+              .delay(5000)
+              .fadeOut(1000);
+            return false;
+          }
+        },
+        error(XMLHttpRequest, textStatus, errorThrown) {
+          if (XMLHttpRequest.status == 0) {
+            console.log('Network Error.');
+          } else if (XMLHttpRequest.status == 404) {
+            console.log('Requested URL not found.');
+          } else if (XMLHttpRequest.status == 500) {
+            console.log('Internel Server Error.');
+          } else {
+            alert('Unknown Error : ' + XMLHttpRequest.responseText);
+          }
+          $('#mc-form_footer_server_err').fadeIn(800);
+          $('#mc-form_footer_server_err').css('color', '#1f3b42');
+          $('#mc-form_footer_server_err').text(
+            'Some serious server error happened! Please try after sometime'
+          );
+          $('#mc-form_footer_server_err')
+            .delay(5000)
+            .fadeOut(1000);
+        }
+      });
+    }
+  });
+
+  /* Smooth Scrolling
+   * ------------------------------------------------------ */
+  function clSmoothScroll() {
+    $('.smoothscroll').click(function(e) {
+      console.log('smooth');
+      var target = this.hash,
+        $target = $(target);
+
+      e.preventDefault();
+      e.stopPropagation();
+
+      $('html, body')
+        .stop()
+        .animate(
+          {
+            scrollTop: $target.offset().top
+          },
+          cfg.scrollDuration,
+          'swing'
+        )
+        .promise()
+        .done(function() {
+          // check if menu is open
+          if ($('body').hasClass('menu-is-open')) {
+            $('.header-menu-toggle').trigger('click');
+          }
+
+          window.location.hash = target;
+        });
+    });
+  }
 })(jQuery);

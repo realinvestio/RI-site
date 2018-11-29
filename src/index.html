@@ -36,9 +36,6 @@
     <![endif]-->
   </head>
   <body>
-    <!-- Page Preloder -->
-    <div id="preloder"><div class="loader"></div></div>
-
     <!-- Header section -->
     <header class="header-section clearfix">
       <div class="container-fluid">
@@ -48,11 +45,13 @@
         <div class="responsive-bar"><i class="fa fa-bars"></i></div>
         <nav class="main-menu">
           <ul class="menu-list">
-            <li><a href="">OUR FOCUS</a></li>
-            <li><a href="">PARTNERSHIPS</a></li>
-            <li><a href="">ROADMAP</a></li>
-            <li><a href="">TEAM</a></li>
-            <li><a href="">SUBSCRIBE</a></li>
+            <li><a class="smoothscroll" href="#focus">OUR FOCUS</a></li>
+            <li>
+              <a class="smoothscroll" href="#partnerships">PARTNERSHIPS</a>
+            </li>
+            <li><a class="smoothscroll" href="#roadmap">ROADMAP</a></li>
+            <li><a class="smoothscroll" href="#coreteam">TEAM</a></li>
+            <li><a class="smoothscroll" href="#subscribe">SUBSCRIBE</a></li>
           </ul>
         </nav>
       </div>
@@ -87,16 +86,15 @@
             <h4 class="subscribe_h4" id="subscribe_msg">
               Like to be the first?<br />subscribe to know more about us
             </h4>
-            <form class="group" id="mc-form" novalidate="true">
+            <form class="group" id="mc-form">
               <div id="mc-form_server_err"></div>
               <input
                 class="fname"
                 id="drip-fname"
                 name="fname"
                 placeholder="Full Name"
-                required=""
+                required
                 type="text"
-                value=""
                 autocomplete="off"
               />
               <input
@@ -104,16 +102,18 @@
                 id="drip-email"
                 name="email"
                 placeholder="Email Address"
-                required=""
+                required
                 type="email"
                 value=""
                 autocomplete="off"
               />
-              <input
-                name="submit"
-                type="submit"
-                value="Yes I want to know more"
-              />
+              <div>
+                <input
+                  name="submit"
+                  type="submit"
+                  value="Yes I want to know more"
+                />
+              </div>
             </form>
           </div>
         </div>
@@ -122,7 +122,7 @@
     <!-- Hero section end -->
 
     <!-- Features section -->
-    <section class="features-section spad">
+    <section id="focus" class="features-section spad">
       <div class="container text-white">
         <div class="section-title text-center">
           <h2>We are REALinvest</h2>
@@ -211,7 +211,7 @@
     <!-- Features section end -->
 
     <!-- Team section -->
-    <section class="team-section spad">
+    <section id="coreteam" class="team-section spad">
       <div class="container">
         <div class="section-title text-center">
           <h2>Core Team</h2>
@@ -480,32 +480,20 @@
               <div class="author-meta">
                 <div
                   class="author-avatar set-bg"
-                  data-setbg="img/review/1.jpg"
+                  data-setbg="https://via.placeholder.com/150"
                 ></div>
-                <div class="author-name">
-                  <h4>Aaron Ballance</h4>
-                  <p>Ceo Bitcoin</p>
-                </div>
               </div>
               <div class="author-meta">
                 <div
                   class="author-avatar set-bg"
-                  data-setbg="img/review/2.jpg"
+                  data-setbg="https://via.placeholder.com/150"
                 ></div>
-                <div class="author-name">
-                  <h4>Jackson Nash</h4>
-                  <p>Head of Design</p>
-                </div>
               </div>
               <div class="author-meta">
                 <div
                   class="author-avatar set-bg"
-                  data-setbg="img/review/3.jpg"
+                  data-setbg="https://via.placeholder.com/150"
                 ></div>
-                <div class="author-name">
-                  <h4>Katy Abrams</h4>
-                  <p>Product Manager</p>
-                </div>
               </div>
             </div>
           </div>
@@ -513,8 +501,81 @@
       </div>
     </section>
     <!-- Review section end -->
+    <!-- Partner section -->
+    <section id="partnerships" class="partners-section spad">
+      <div class="container">
+        <div class="section-title text-center">
+          <h2>Partners</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor.
+          </p>
+        </div>
+      </div>
+      <div class="partners ">
+        <div class="flex-grid">
+          <div class="partner col">
+            <img
+              class="lazy lazy-loaded"
+              src="https://via.placeholder.com/150"
+              data-lazy-type="image"
+              data-lazy-src="https://via.placeholder.com/150"
+              alt="Square placeholder image 300px"
+            />
+          </div>
+          <div class="partner col">
+            <img
+              class="lazy lazy-loaded"
+              src="https://via.placeholder.com/150"
+              data-lazy-type="image"
+              data-lazy-src="https://via.placeholder.com/150"
+              alt="Square placeholder image 300px"
+            />
+          </div>
+          <div class="partner col">
+            <img
+              class="lazy lazy-loaded"
+              src="https://via.placeholder.com/150"
+              data-lazy-type="image"
+              data-lazy-src="https://via.placeholder.com/150"
+              alt="Square placeholder image 300px"
+            />
+          </div>
+        </div>
+        <div class="flex-grid">
+          <div class="partner col">
+            <img
+              class="lazy lazy-loaded"
+              src="https://via.placeholder.com/150"
+              data-lazy-type="image"
+              data-lazy-src="https://via.placeholder.com/150"
+              alt="Square placeholder image 300px"
+            />
+          </div>
+          <div class="partner col">
+            <img
+              class="lazy lazy-loaded"
+              src="https://via.placeholder.com/150"
+              data-lazy-type="image"
+              data-lazy-src="https://via.placeholder.com/150"
+              alt="Square placeholder image 300px"
+            />
+          </div>
+          <div class="partner col">
+            <img
+              class="lazy lazy-loaded"
+              src="https://via.placeholder.com/150"
+              data-lazy-type="image"
+              data-lazy-src="https://via.placeholder.com/150"
+              alt="Square placeholder image 300px"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Partner section -->
     <!-- Roadmap section -->
-    <section class="roadmap-section spad">
+    <section id="roadmap" class="roadmap-section spad">
       <div class="text-white">
         <div class="section-title text-center">
           <h2 style="color:#173B43">Roadmap</h2>
@@ -741,6 +802,7 @@
     <script src="js/owl.carousel.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js"></script>
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
