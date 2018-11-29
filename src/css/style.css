@@ -1779,8 +1779,7 @@ p.focus_yr::after {
 .vertical-row {
   float: left;
   height: 230px;
-  width: 1px;
-  /* edit this if you want */
+  width: 1px; /* edit this if you want */
   background-color: white;
 }
 .home_p,
@@ -1800,15 +1799,18 @@ p.focus_yr::after {
 ************ */
 .partners-section .partner {
   margin-bottom: 20px;
+  align-items: center;
+  justify-content: center;
 }
 .partners-section .flex-grid img {
-  width: 100%;
 }
 .flex-grid {
   display: flex;
 }
 .flex-grid .col {
   flex: 1;
+  display: flex;
+  justify-content: center;
 }
 .flex-grid-thirds {
   display: flex;
