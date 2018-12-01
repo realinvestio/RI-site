@@ -363,10 +363,10 @@ ol {
 }
 .hero-section #videobcg {
   position: absolute;
-  top: 0px;
+  top: 20px;
   left: 0px;
   min-width: 100%;
-  min-height: 104%;
+  min-height: 100%;
   width: auto;
   height: auto;
   overflow: hidden;
@@ -402,7 +402,7 @@ ol {
 }
 #mc-form input {
   width: 380px;
-  margin: 10px auto;
+  margin: 10px auto 0 auto;
   padding: 0.5rem 20px 0.5rem 20px;
   color: #f1f3fe !important;
   border: solid 1px;
@@ -654,6 +654,7 @@ ol {
 ----------------------- */
 .newsletter-section {
   padding: 50px 0;
+  background: #1f3b42;
 }
 .newsletter-text h2 {
   font-size: 36px;
@@ -1313,6 +1314,9 @@ ol {
   .fact i {
     font-size: 67px;
   }
+  #mc-form input {
+    width: 100%;
+  }
 }
 /* Tablet :768px. */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -1415,6 +1419,9 @@ ol {
   }
   .newsletter-section {
     text-align: center;
+  }
+  #mc-form input {
+    width: 100%;
   }
 }
 /* Large Mobile :480px. */
@@ -1556,9 +1563,15 @@ ol {
     text-align: left;
     margin-top: 20px;
   }
+  #mc-form input {
+    width: 100%;
+  }
 }
 /* small Mobile :320px. */
 @media only screen and (max-width: 479px) {
+  #mc-form input {
+    width: 100%;
+  }
   .review-text {
     padding: 0 45px;
   }
@@ -1828,4 +1841,8 @@ p.focus_yr::after {
     width: 100%;
     margin: 0 0 10px 0;
   }
+}
+label.error {
+  font-size: 10px;
+  color: red;
 }
