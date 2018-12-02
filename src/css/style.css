@@ -313,7 +313,7 @@ ol {
   top: 0;
   padding: 15px 50px;
   z-index: 99;
-  background: #fff;
+  background: #f1f3fe;
 }
 .header-section .site-btn {
   float: right;
@@ -474,7 +474,7 @@ ol {
 	Team Section
 ----------------------- */
 .team-section {
-  background: #eaeaea;
+  background: #f1f3fe;
   overflow: hidden;
 }
 .member {
@@ -708,7 +708,7 @@ ol {
   Blog Section
 ----------------------- */
 .blog-section {
-  background: #eaeaea;
+  background: #f1f3fe;
 }
 .blog-section h2,
 .blog-section p {
@@ -1431,7 +1431,7 @@ ol {
   }
   .header-section {
     padding: 30px 0;
-    background: #fff;
+    background: #f1f3fe;
   }
   .header-section .responsive-bar {
     float: right;
@@ -1635,7 +1635,7 @@ ol {
   width: 100%;
 }
 .roadmap .focus_title {
-  background-color: #eaeaea;
+  background-color: #f1f3fe;
 }
 .structure {
   position: absolute;
@@ -1785,7 +1785,7 @@ p.focus_yr::after {
   margin-right: 0px !important;
 }
 .bg-dark {
-  background-color: #eaeaea !important;
+  background-color: #f1f3fe !important;
   width: 100%;
   margin: 0px auto;
 }
@@ -1810,6 +1810,9 @@ p.focus_yr::after {
 /* ************
   partners-section
 ************ */
+.partners-section {
+  background: #f1f3fe;
+}
 .partners-section .partner {
   margin-bottom: 20px;
   align-items: center;
