@@ -5,9 +5,9 @@
     scrollDuration: 800 // smoothscroll duration
   };
   clSmoothScroll();
-  // $('a').click(function(e) {
-  //   e.preventDefault();
-  // });
+  $('.timeline a').click(function(e) {
+    e.preventDefault();
+  });
   /*------------------
 		hero
 	--------------------*/
