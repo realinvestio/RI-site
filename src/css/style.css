@@ -1796,8 +1796,7 @@ p.focus_yr::after {
 .vertical-row {
   float: left;
   height: 230px;
-  width: 1px;
-  /* edit this if you want */
+  width: 1px; /* edit this if you want */
   background-color: white;
 }
 .home_p,
@@ -1853,4 +1852,32 @@ p.focus_yr::after {
 label.error {
   font-size: 10px;
   color: red;
+}
+.icon-bar {
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: 1;
+}
+.icon-bar:hover a {
+  padding: 10px;
+  font-size: 22px;
+}
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 6px;
+  transition: all 0.2s ease;
+  color: #141d39;
+  font-size: 21px;
+  background: rgba(241, 243, 254, 0.95);
+}
+.icon-bar a:hover {
+  display: block;
+  text-align: center;
+  color: white;
+  font-size: 21px;
+  background: #eb2027;
 }
