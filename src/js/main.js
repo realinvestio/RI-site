@@ -31,7 +31,6 @@
   });
 
   $('.responsive-bar').on('click', function(event) {
-    console.log('click');
     nav.slideToggle(200);
     event.preventDefault();
   });

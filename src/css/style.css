@@ -27,7 +27,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: #173b43;
+  color: #141d39;
   margin: 0;
   font-family: myriad-pro, sans-serif;
   font-weight: 700;
@@ -174,7 +174,7 @@ ol {
 }
 
 .site-btn.sb-gradients.sbg-line {
-  color: #173b43;
+  color: #141d39;
   z-index: 1;
 }
 
@@ -191,7 +191,7 @@ ol {
 }
 
 .site-btn.sb-gradients.sbg-line:hover {
-  color: #173b43;
+  color: #141d39;
 }
 
 .gradient-bg,
@@ -308,12 +308,12 @@ ol {
 	Header section
 ----------------------- */
 .header-section {
-  position: absolute;
+  position: fixed;
   width: 100%;
   top: 0;
   padding: 15px 50px;
   z-index: 99;
-  background: #f1f3fe;
+  background: rgba(241, 243, 254, 0.95);
 }
 .header-section .site-btn {
   float: right;
@@ -363,10 +363,10 @@ ol {
 }
 .hero-section #videobcg {
   position: absolute;
-  top: 20px;
+  top: -24px;
   left: 0px;
   min-width: 100%;
-  min-height: 100%;
+  min-height: 108%;
   width: auto;
   height: auto;
   overflow: hidden;
@@ -378,7 +378,7 @@ ol {
   left: 80px;
 }
 .hero-text {
-  padding-top: 60px;
+  padding-top: 30px;
 }
 .hero-text h2 {
   color: #fdfdfd;
@@ -446,19 +446,19 @@ ol {
   Feature Section
 ----------------------- */
 .features-section {
-  background: #173b43;
+  background: #141d39;
 }
 .features-section .container {
   margin-bottom: -45px;
 }
 .feature {
   margin-bottom: 45px;
+  display: flex;
 }
 .feature .focus_img {
-  width: 48px;
-  height: 48px;
+  width: 20%;
+  height: 20%;
   float: left;
-  padding-top: 10px;
 }
 .feature .feature-content {
   padding-left: 70px;
@@ -537,7 +537,7 @@ ol {
   margin: 0 8px;
 }
 .member-social a:hover {
-  background: #173b43;
+  background: #141d39;
   color: #fff;
 }
 .member-meta {
@@ -573,7 +573,7 @@ ol {
   Review Section
 ----------------------- */
 .review-section {
-  background: #173b43;
+  background: #141d39;
 }
 .review-section h4 {
   color: #fff;
@@ -653,8 +653,13 @@ ol {
 	Newsletter Section
 ----------------------- */
 .newsletter-section {
-  padding: 50px 0;
-  background: #1f3b42;
+  background: #141d39;
+}
+.newsletter-section .hero-text {
+  padding: 0;
+}
+.newsletter-section .hero-subscribe {
+  margin-top: 122px;
 }
 .newsletter-text h2 {
   font-size: 36px;
@@ -687,7 +692,7 @@ ol {
   border-radius: 0px 50px 50px 0px;
   min-width: 140px;
   background: #fff;
-  color: #173b43;
+  color: #141d39;
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
@@ -712,7 +717,7 @@ ol {
 }
 .blog-section h2,
 .blog-section p {
-  color: #173b43;
+  color: #141d39;
 }
 .blog-thumb {
   margin-bottom: 0;
@@ -737,7 +742,7 @@ ol {
   margin-bottom: 20px;
 }
 .blog-text .blog-title a {
-  color: #173b43;
+  color: #141d39;
 }
 .blog-text .post-meta a {
   font-size: 13px;
@@ -849,7 +854,7 @@ ol {
   padding-top: 10px;
 }
 .site-beradcamb a {
-  color: #173b43;
+  color: #141d39;
   font-size: 16px;
 }
 .site-beradcamb span {
@@ -866,7 +871,7 @@ ol {
   margin-bottom: 30px;
 }
 .blog-page .readmore {
-  color: #173b43;
+  color: #141d39;
 }
 .blog-page .readmore i {
   color: #16d0c5;
@@ -901,7 +906,7 @@ ol {
 .widget-area .widget ul a {
   display: inline-block;
   font-size: 16px;
-  color: #173b43;
+  color: #141d39;
   margin-bottom: 20px;
 }
 .widget-area .widget ul a:hover {
@@ -916,10 +921,10 @@ ol {
 }
 .widget-area .widget .popular-posts h5 a {
   font-size: 18px;
-  color: #173b43;
+  color: #141d39;
 }
 .widget-area .widget .popular-posts h5 a:hover {
-  color: #173b43;
+  color: #141d39;
 }
 .widget-area .widget .twitter-widget li {
   margin-bottom: 20px;
@@ -932,7 +937,7 @@ ol {
 }
 .widget-area .widget .twitter-widget h5 {
   font-size: 18px;
-  color: #173b43;
+  color: #141d39;
   margin-bottom: 5px;
 }
 .widget-area .widget .twitter-widget a {
@@ -959,7 +964,7 @@ ol {
 }
 .single-blog-page blockquote {
   font-size: 24px;
-  color: #173b43;
+  color: #141d39;
   padding-left: 25px;
   border-left: 2px solid #16d0c5;
   line-height: normal;
@@ -1076,7 +1081,7 @@ ol {
   font-size: 14px;
   border: 1px solid #ebebeb;
   background: #f3f7f9;
-  color: #173b43;
+  color: #141d39;
   padding: 4px 25px;
   border-radius: 2px;
   margin-right: 5px;
@@ -1169,11 +1174,11 @@ ol {
   border-bottom: 1px solid #ebebeb;
   font-size: 16px;
   padding-bottom: 10px;
-  color: #173b43;
+  color: #141d39;
 }
 .contact-form input:focus,
 .contact-form textarea:focus {
-  border-color: #173b43;
+  border-color: #141d39;
 }
 .contact-form textarea {
   padding-bottom: 10px;
@@ -1321,7 +1326,7 @@ ol {
 /* Tablet :768px. */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .header-section {
-    padding: 30px 15px 0;
+    padding: 15px 50px;
   }
   .menu-list li a {
     margin-right: 6px;
@@ -1431,7 +1436,6 @@ ol {
   }
   .header-section {
     padding: 30px 0;
-    background: #f1f3fe;
   }
   .header-section .responsive-bar {
     float: right;
@@ -1469,7 +1473,7 @@ ol {
     display: block;
     padding: 10px 5px;
     margin-right: 0;
-    color: #173b43;
+    color: #141d39;
   }
   .hero-text h2 {
     font-size: 40px;
@@ -1776,7 +1780,7 @@ p.focus_yr::after {
   margin-bottom: auto;
 }
 .nav-link {
-  color: #1f3b42 !important;
+  color: #141d39 !important;
 }
 .navbar-nav {
   margin-left: 13% !important;
@@ -1792,7 +1796,8 @@ p.focus_yr::after {
 .vertical-row {
   float: left;
   height: 230px;
-  width: 1px; /* edit this if you want */
+  width: 1px;
+  /* edit this if you want */
   background-color: white;
 }
 .home_p,
