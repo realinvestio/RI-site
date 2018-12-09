@@ -67,12 +67,10 @@
 
   review_text.owlCarousel({
     loop: true,
-    nav: true,
-    dots: false,
+    dots: true,
     items: 1,
     margin: 20,
     autoplay: true,
-    navText: ['<i class="ti-angle-left"><i>', '<i class="ti-angle-right"><i>'],
     animateOut: 'fadeOutDown',
     autoplayHoverPause: true,
     animateIn: 'fadeInDown'

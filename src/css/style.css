@@ -334,6 +334,7 @@ ol {
 }
 .menu-list {
   list-style: none;
+  font-weight: bold;
 }
 .menu-list li {
   display: inline;
@@ -378,7 +379,7 @@ ol {
   left: 80px;
 }
 .hero-text {
-  padding-top: 30px;
+  padding-top: 177px;
 }
 .hero-text h2 {
   color: #fdfdfd;
@@ -407,7 +408,7 @@ ol {
   color: #f1f3fe !important;
   border: solid 1px;
   border-color: #ccc;
-  border-radius: 0px;
+  border-radius: 5px;
   background: transparent;
 }
 #mc-form input::placeholder {
@@ -418,6 +419,12 @@ ol {
 }
 #mc-form input[type='submit'] {
   cursor: pointer;
+  color: #ffffff;
+  background: red;
+  border-color: red;
+  border: solid 1px;
+  border-color: red;
+  border-radius: 5px;
 }
 /* ---------------------
   About Section
@@ -478,15 +485,11 @@ ol {
   overflow: hidden;
 }
 .member {
-  background: #fff;
   width: calc(20% - 25px);
   display: inline-block;
   margin: 10px;
   text-align: center;
   padding: 50px 10px;
-  -webkit-box-shadow: 1px 1px 1px rgba(33, 54, 61, 0.15);
-  box-shadow: 1px 1px 1px rgba(33, 54, 61, 0.15);
-  border-radius: 10px;
 }
 .member h2 {
   font-size: 22px;
@@ -503,7 +506,7 @@ ol {
   transition: all 0.4s;
   opacity: 1;
 }
-.member:hover {
+/* .member:hover {
   -webkit-box-shadow: 1px 14px 43px rgba(33, 54, 61, 0.15);
   box-shadow: 1px 14px 43px rgba(33, 54, 61, 0.15);
 }
@@ -512,7 +515,7 @@ ol {
 }
 .member:hover .member-text {
   opacity: 0;
-}
+} */
 .member-img {
   width: 230px;
   height: 230px;
@@ -522,7 +525,6 @@ ol {
 }
 .member-social {
   padding-top: 25px;
-  background: #fff;
   position: relative;
   z-index: 2;
 }
@@ -1464,6 +1466,7 @@ ol {
   }
   .menu-list {
     list-style: none;
+    font-weight: bold;
   }
   .menu-list li {
     display: block;
@@ -1796,7 +1799,8 @@ p.focus_yr::after {
 .vertical-row {
   float: left;
   height: 230px;
-  width: 1px; /* edit this if you want */
+  width: 1px;
+  /* edit this if you want */
   background-color: white;
 }
 .home_p,
