@@ -4,10 +4,13 @@
   var cfg = {
     scrollDuration: 800 // smoothscroll duration
   };
+
   clSmoothScroll();
+
   $('.timeline a').click(function(e) {
     e.preventDefault();
   });
+
   /*------------------
 		hero
 	--------------------*/
@@ -17,6 +20,7 @@
     .bind('ended', function() {
       this.currentTime = 3;
     });
+
   /*------------------
 		Navigation
 	--------------------*/
@@ -53,18 +57,6 @@
     review_meta.trigger('next.owl.carousel');
   });
 
-  review_meta.owlCarousel({
-    loop: true,
-    nav: false,
-    dots: true,
-    items: 3,
-    center: true,
-    margin: 20,
-    autoplay: true,
-    mouseDrag: false,
-    autoplayHoverPause: true
-  });
-
   review_text.owlCarousel({
     loop: true,
     dots: true,
@@ -84,6 +76,7 @@
       .next('span')
       .addClass('active');
   });
+
   $('.check-form').blur(function() {
     if ($(this).val() === '') {
       $(this)
