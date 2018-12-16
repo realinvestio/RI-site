@@ -94,21 +94,39 @@
     window.innerWidth || 0
   );
 
+  $(window).on('resize', e => {
+    console.log((viewport = document.body.clientWidth));
+  });
+
+  var roadMapText = {
+    2017: '2017 Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore sint ratione obcaecati ipsam, delectus sunt est cupiditate dolorum magnam enim pariatur hic architecto, deserunt possimus assumenda harum sit aliquam illo!',
+    2018: '2018 Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore sint ratione obcaecati ipsam, delectus sunt est cupiditate dolorum magnam enim pariatur hic architecto, deserunt possimus assumenda harum sit aliquam illo!',
+    2019: '2019 Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore sint ratione obcaecati ipsam, delectus sunt est cupiditate dolorum magnam enim pariatur hic architecto, deserunt possimus assumenda harum sit aliquam illo!'
+  };
+
   $('.goal_wrap').click(function() {
     var diff = $(this).parent()[0].offsetLeft;
     $('.date .goal_wrap').removeClass('active bounce');
     $(this).addClass('active bounce');
     TweenLite.to($('.date').parent(), 1, {
       x: viewport * 0.5 - diff,
-      onComplete() {}
+      onComplete() {
+        console.log('finished');
+      }
     });
   });
 
-  $('.goal_set').click(function() {
-    var bg = $(this).attr('data-bg-image');
-    $('.roadmap')
+  $('.date').click(function() {
+    var year = $(this)
+      .attr('class')
+      .split(' ')[1]
+      .split('-')[1];
+    var text = roadMapText[year];
+
+    console.log('class: ', text);
+    $('.roadmapText')
       .fadeTo('ease', 0.3, function() {
-        $(this).css('background-image', 'url(' + bg + ')');
+        $('.roadmapText').text(text);
       })
       .fadeTo('slow', 1);
   });
@@ -117,9 +135,16 @@
     var diff = $(this).parent()[0].offsetLeft;
     TweenLite.to($('.date').parent(), 1, {
       x: viewport * 0.5 - diff,
-      onComplete() {}
+      onComplete() {
+        fadeText();
+        console.log('finished');
+      }
     });
   });
+
+  function fadeText() {
+    console.log('jbv');
+  }
 
   $('.team-members').flickity({
     // options
